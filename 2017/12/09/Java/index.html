@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java基础知识, java" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Java基础知识">
+<meta name="keywords" content="java基础知识, java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础知识">
+<meta property="og:url" content="https://xxkarina.github.io/2017/12/09/Java/index.html">
+<meta property="og:site_name" content="xxKarina">
+<meta property="og:description" content="Java基础知识">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-09T04:53:37.572Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础知识">
+<meta name="twitter:description" content="Java基础知识">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xxkarina.github.io/2017/12/09/Java/"/>
+
+
+
+
+
+  <title>Java基础知识 | xxKarina</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3e0c730baed76d40d461a7c3020a78d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxKarina</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">GO AHEAD!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-java">
+          <a href="/categories/Java" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Java
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-javascript">
+          <a href="/categories/JavaScript" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            JavaScript
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-javascript笔记">
+          <a href="/categories/JavaScript笔记" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            JavaScript笔记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-web">
+          <a href="/categories/Web" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Web
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-工具类">
+          <a href="/categories/工具类" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            工具类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xxkarina.github.io/2017/12/09/Java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxKarina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxKarina">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-09T12:17:33+08:00">
+                2017-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/09/Java/" class="leancloud_visitors" data-flag-title="Java基础知识">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Java基础知识<br><a id="more"></a></p>
+<h1 id="Java基础知识"><a href="#Java基础知识" class="headerlink" title="Java基础知识"></a>Java基础知识</h1><p>不知道为什么，最近很喜欢Java这门语言，个人认为，学习一门编程语言，扎实的基础是相当重要的，所以在这里，我想跟大家分享一下我掌握的知识点</p>
+<p>嗯，不说大家都知道，Java是一门兼容性很好的语言，跨平台支持的很好，比较常用的有<code>Linux</code>和<code>Windows</code>，所以首先，我将会跟大家分享以下两者的区别</p>
+<h4 id="Linux与Windows的区别"><a href="#Linux与Windows的区别" class="headerlink" title="Linux与Windows的区别"></a>Linux与Windows的区别</h4><p>Linux是一个开源的操作系统，与Windows有三大不同点：</p>
+<ul>
+<li><strong>文件系统不同</strong>：Windows是盘符，Linux是目录</li>
+<li><strong>外部设备映射不同</strong>： Windows是盘符，Linux是挂载点（目录）</li>
+<li><strong>安全级别不同</strong>： Windows安全级别低，Linux安全级别高，因为是服务端系统 /home——具有最高权限</li>
+</ul>
+<h4 id="c语言和Java的区别"><a href="#c语言和Java的区别" class="headerlink" title="c语言和Java的区别"></a>c语言和Java的区别</h4><p>而对于c语言和Java的区别的话，主要就是在编译过程</p>
+<ul>
+<li><strong>c文件</strong>，编译，直接编译为可执行文件（0，1）</li>
+<li><strong>java文件</strong>，编译，字节码文件（<code>.class</code>），<code>jvm</code>（不同平台有不同的JVM）运行字节码文件，计算机识别（0，1）</li>
+</ul>
+<h4 id="JDK、JRE、JVM"><a href="#JDK、JRE、JVM" class="headerlink" title="JDK、JRE、JVM"></a>JDK、JRE、JVM</h4><p>上面提到了JVM（Java虚拟机），那我们就来看下JDK、JRE、JVM三者的关系</p>
+<ul>
+<li><strong>JDK</strong> - Java开发工具包</li>
+<li><strong>JRE</strong>- Java运行环境</li>
+<li><strong>JVM</strong> - Java虚拟机</li>
+</ul>
+<p>三者的区别可以用一句话进行概括：运行一个Java程序所需要的最小环境是 JRE，开发一个Java的最小环境是JDK，加载字节码文件，实现跨平台需要用到JVM</p>
+<h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><p>说到环境这个词，我就不得不说一下Java的IDE（集成开发环境）eclipse，这是一款主流的Java开发环境，代码提示，搭建目录结构等等，都是十分赞的，推荐使用</p>
+<p>eclipse常用的快捷键，我这里想跟大家分享一些：</p>
+<blockquote>
+<ul>
+<li>输入main的时候，然后就使用Alt+/之后就可以出现代码提示</li>
+<li>Alt+/是比较常用的一个代码提示快捷键（可以完成一些代码的插入）</li>
+<li>CTRL+1（快速修复）就是可以快速查看错误并且快速修复</li>
+<li>Shift+Enter（当前行下插入一个空行，不限位置）</li>
+<li>ctrl+shift+enter(当前行上插入一个空行)</li>
+<li>ctrl+d删除当前行<ul>
+<li>Alt+上下键，可以交换语句的位置</li>
+</ul>
+</li>
+<li>ctrl+alt+上下键可以快速的复制一行，当时有时候会和电脑自带的快捷键冲突</li>
+<li>所以需要自定义一下，改为ctrl+上下键</li>
+<li>ctrl+shift+f（格式化当前代码）</li>
+<li>ctrl+f（查找与替换）</li>
+<li>ctrl+shift+x（把当前选中的文本全部变成小写）<ul>
+<li>ctrl+shift+y（把当前选中的文本全部变成大写)</li>
+<li>ctrl+/（注释或取消注释当前行）</li>
+<li>ctrl+shift+/（注释多行）</li>
+<li>ctrl+shift+(解除多行注释)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p>有了环境之后就可以开始搭建我们的目录结构了，搭建目录结构就需要使用到命名操作，在一门编程语言中，命名是对团队合作的十分重要的一步，一个好的命名可以给开发带来极大的便利</p>
+<p>变量的命名其实比较基础的就是要做到“见名知意”，变量的命名采用驼峰式命名法，类名的首字母大写，命名之后就需要声明变量和初始化变量，凡事都是需要先有了才可以对其进行操作，变量也是一样，需要在使用前进行初始化，而且必须与数据类型相匹配。</p>
+<p><strong>还需要注意的一点是：</strong>默认的整数会杯认为是int类型，默认的小数是double型<br>整型直接量可以直接赋值给byte,char,short,byte,char,short只要参与运算，则一律转为int</p>
+<h4 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h4><p>分支结构有：if语句，if else语句，else if 语句，switch case语句<br><strong>需要注意的是：</strong>在Java中，存在变量的作用域<br>变量的作用于就是从变量声明到包含这个变量的最近的大括号结束<br>当作用范围重叠时，变量不能重名</p>
+<p>除了分支结构，我们经常使用的还有<strong>循环</strong>，所谓循环就是：一组相同或相似的语句被有规律的重复性执行<br>对于循环，我们需要做到的三点是：<br><strong>循环三要素：</strong><br>    1.循环条件初始化<br>    2.循环条件（以循环变量为条件）<br>    3.循环变量的改变（向着循环结束变）——在循环过程中改变的量就是循环变量</p>
+<p>这里，我想用一道经典的题来进行讲解：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//题目如下：用编程实现9+99+999+...+99..9（十个九），并且输出运算结果</span><br><span class="line">//题目分析如下：</span><br><span class="line">//设num为每次加的那个数，可以看到，当</span><br><span class="line">/**</span><br><span class="line">* i=1  num=9</span><br><span class="line">* i=2  num=99</span><br><span class="line">* i=3  num=999</span><br><span class="line">* i=4  num=9999</span><br><span class="line">*/</span><br><span class="line">/**</span><br><span class="line">* 9到99  9*10+9</span><br><span class="line">* 99到999  99*10+9</span><br><span class="line">* 999到9999  999*10+9</span><br><span class="line">*/</span><br><span class="line">// 有了以上的规律，编写程序就不是什么难事啦</span><br></pre></td></tr></table></figure>
+<p>我们知道，循环常用的有三种：当到型循环（while），直到型循环（do-while），for循环<br>那面对这三种我们应该怎么选用呢，请看下面几点：</p>
+<ul>
+<li>如果题目中出现“当”这个字眼的话，一般我们会选用当到型循环</li>
+<li>如果题目中出现“直到”这个字眼的话，我们一般使用直到型循环</li>
+<li>如果题目给出的了固定的循环次数，我们可以选用for循环</li>
+</ul>
+<p>上面的三点看起来可能十分不起眼，那我们现在就来实战演练一下：</p>
+<blockquote>
+<p><strong>题目：</strong>有数列2/3、4/5、6/9、10/15……求此数列前30项的和<br><strong>分析：</strong>对于数列的题，首先要找出通项公式，或前后项的计算关系公式，根据公式求所需。由于数列的题一般执行次数能确定，用<code>for</code>循环语句来编写比较方便</p>
+<p> <strong>题目：</strong>年存款利率为3%，本金为10000，存款总额超过20000时，求具体的收益<br><strong>分析：</strong>对于这类型的题，其实隐含了”当“字，<strong>当存款总额超过20000时，求具体的收益</strong>。用<code>while</code>循环语句来编写比较方便</p>
+</blockquote>
+<h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><p>前面我们一直在说编写<strong>程序</strong>，那程序到底是什么呢，简单的说，程序是由<strong>算法</strong>和<strong>数据结构</strong>组成的，以上的分支结构和循环都是流程问题亦即算法问题，所谓的数据结构就是把数据按照某种特定的结构来保存，设计合理的数据结构是十分重要的，数组就是一种基本的数据结构</p>
+<p><strong>数组：</strong>相同的数据类型的元素组成的集合就是数组<br>数组的声明有多种方式，常用的如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int[] arr = new int[4];</span><br><span class="line"></span><br><span class="line">int [] arr = &#123;1,2,3&#125;;</span><br><span class="line"></span><br><span class="line">int[] arr;</span><br><span class="line">arr = new int[4];</span><br><span class="line"></span><br><span class="line">int[] arr = new int[]&#123;1,2,3&#125;;</span><br></pre></td></tr></table></figure>
+<p>数组也有很多实用的API，具体的，大家可以查阅相关的<a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank" rel="noopener">文档</a></p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>方法用于封装特定逻辑功能，尽可能独立，可以被反复调用，减少代码输出</p>
+<p><strong>方法定义五要素</strong></p>
+<ul>
+<li>修饰词 </li>
+<li>返回值类型 <ul>
+<li>方法名</li>
+<li>参数列表</li>
+<li>方法体 </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>方法的参数可有可无，有参数更加灵活<br>当方法需要返回结果时，设置特定返回值类型，不需要结果的时候，为void<br>返回结果通过return 关键字，return 后的数据必须和返回值的类型匹配</p>
+</blockquote>
+<h4 id="类——面向对象"><a href="#类——面向对象" class="headerlink" title="类——面向对象"></a>类——面向对象</h4><p>我们看到的东西其实都可以称之为对象，将对象抽象出来，就有了类</p>
+<p><strong>类是一种数据类型</strong><br>类中只能包含：属性（变量）和行为（方法）<br><strong>一个类可以创建多个对象</strong><br>同一个类的多个对象，结构相同，数据不同</p>
+<p>将类实例化，我们可以使用<code>new</code></p>
+<blockquote>
+<p>new 出来的东西在堆里面，其余在栈里面</p>
+<p>成员变量都是在堆里面的<br>局部变量在栈里面<br>成员变量在创建对象时存在，对象被回收时消失<br>垃圾回收器不定时回收没有引用指向的对象，回收过程透明<br>自动调用方式：<strong>System.gc()</strong><br>内存泄漏是由于不再使用的对象未被及时回收<br>建议，对象不用时，对象及时赋值为<strong>null</strong>（空，没有指向对象）</p>
+</blockquote>
+<p>讲到类就脱不了方法，讲到方法，就不得不提及下方法的重载，讲到方法的重载就需要知道方法的签名</p>
+<p><strong>方法的签名：</strong>就是方法名和参数列表<br>一个类中不可以有两个方法的签名完全相同，那重载（overload）指代的就是方法的签名不同（方法名相同，参数不同）<br>一个类中，经常见到的不外乎构造方法，而，构造方法是可以重载的<br>那构造方法是什么呢，有什么作用呢，一般用来做什么呢</p>
+<ul>
+<li>构造方法与类同名，没有返回值类型</li>
+<li>构造方法常常用于给成员变量初始化</li>
+<li>构造方法是在创建对象时被自动调用</li>
+<li>编辑器会在没有显示指明构造方法的情况下，默认给出一个无参数的构造方法</li>
+</ul>
+<p>我们知道，类是需要实例化之后才可以使用的，那实例化出来的那么多个对象在使用的时候怎么区分呢，于是我们就有了<code>this</code>，但是，需要注意的是，这个不是指针</p>
+<p><strong>Java 没有指针，没有二维数组（叫做数组的数组）</strong><br><code>this</code>在这里只是一个简单的指向作用，谁调用它，就指向谁</p>
+<h4 id="帧栈和方法区"><a href="#帧栈和方法区" class="headerlink" title="帧栈和方法区"></a>帧栈和方法区</h4><p>有调用就会有存储，存储主要有两个（帧栈和方法区）</p>
+<p>在Java中，调用一个方法就会得到一个“帧栈”，帧栈中存储的就是局部变量，方法调用结束之后，帧栈就消失，局部变量也会跟着相应的消失</p>
+<p>相应的还有方法区：方法区用于存放类的信息，Java程序运行时，首先啊会通过类装载器载入类文件的字节码信息，经过解析后将其装入方法区，类的各种信息都在方法区存储<br>所以简单的总结一下就是</p>
+<blockquote>
+<p> 方法区：存储类的信息（.class及方法）<br>方法只有一个，通过this关键字区分</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java基础知识/" rel="tag"># Java基础知识</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/08/Match/" rel="next" title="蓝桥杯——Java">
+                <i class="fa fa-chevron-left"></i> 蓝桥杯——Java
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTA0MC83NTg4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/avatar.png"
+              alt="xxKarina" />
+          
+            <p class="site-author-name" itemprop="name">xxKarina</p>
+            <p class="site-description motion-element" itemprop="description">Nothing is impossible, througn hard work, you can be successful.</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xxKarina" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="1097223001@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>Email</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jianshu.com/users/9aac306053d9" title="我的简书" target="_blank">我的简书</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/xxKarina" title="我的CSDN" target="_blank">我的CSDN</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java基础知识"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Java&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="headerlink" title="Java&#x57FA;&#x7840;&#x77E5;&#x8BC6;"></a>Java&#x57FA;&#x7840;&#x77E5;&#x8BC6;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux与Windows的区别"><span class="nav-number">1.0.0.1.</span> <span class="nav-text"><a href="#Linux&#x4E0E;Windows&#x7684;&#x533A;&#x522B;" class="headerlink" title="Linux&#x4E0E;Windows&#x7684;&#x533A;&#x522B;"></a>Linux&#x4E0E;Windows&#x7684;&#x533A;&#x522B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c语言和Java的区别"><span class="nav-number">1.0.0.2.</span> <span class="nav-text"><a href="#c&#x8BED;&#x8A00;&#x548C;Java&#x7684;&#x533A;&#x522B;" class="headerlink" title="c&#x8BED;&#x8A00;&#x548C;Java&#x7684;&#x533A;&#x522B;"></a>c&#x8BED;&#x8A00;&#x548C;Java&#x7684;&#x533A;&#x522B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK、JRE、JVM"><span class="nav-number">1.0.0.3.</span> <span class="nav-text"><a href="#JDK&#x3001;JRE&#x3001;JVM" class="headerlink" title="JDK&#x3001;JRE&#x3001;JVM"></a>JDK&#x3001;JRE&#x3001;JVM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#环境"><span class="nav-number">1.0.0.4.</span> <span class="nav-text"><a href="#&#x73AF;&#x5883;" class="headerlink" title="&#x73AF;&#x5883;"></a>&#x73AF;&#x5883;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名"><span class="nav-number">1.0.1.</span> <span class="nav-text"><a href="#&#x547D;&#x540D;" class="headerlink" title="&#x547D;&#x540D;"></a>&#x547D;&#x540D;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分支结构"><span class="nav-number">1.0.1.1.</span> <span class="nav-text"><a href="#&#x5206;&#x652F;&#x7ED3;&#x6784;" class="headerlink" title="&#x5206;&#x652F;&#x7ED3;&#x6784;"></a>&#x5206;&#x652F;&#x7ED3;&#x6784;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据结构"><span class="nav-number">1.0.1.2.</span> <span class="nav-text"><a href="#&#x6570;&#x636E;&#x7ED3;&#x6784;" class="headerlink" title="&#x6570;&#x636E;&#x7ED3;&#x6784;"></a>&#x6570;&#x636E;&#x7ED3;&#x6784;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-number">1.0.1.3.</span> <span class="nav-text"><a href="#&#x65B9;&#x6CD5;" class="headerlink" title="&#x65B9;&#x6CD5;"></a>&#x65B9;&#x6CD5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类——面向对象"><span class="nav-number">1.0.1.4.</span> <span class="nav-text"><a href="#&#x7C7B;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;" class="headerlink" title="&#x7C7B;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;"></a>&#x7C7B;&#x2014;&#x2014;&#x9762;&#x5411;&#x5BF9;&#x8C61;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帧栈和方法区"><span class="nav-number">1.0.1.5.</span> <span class="nav-text"><a href="#&#x5E27;&#x6808;&#x548C;&#x65B9;&#x6CD5;&#x533A;" class="headerlink" title="&#x5E27;&#x6808;&#x548C;&#x65B9;&#x6CD5;&#x533A;"></a>&#x5E27;&#x6808;&#x548C;&#x65B9;&#x6CD5;&#x533A;</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxKarina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("wodLGQPkR7IGR0hi5CArRU3I-gzGzoHsz", "wvC7B4kUEAhg1633bbnHk0cx");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>
