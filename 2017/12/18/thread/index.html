@@ -78,7 +78,7 @@
 <meta property="og:description" content="多线程，就是这么简单">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/9428215-2d12faa95185d26c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-18T05:05:12.345Z">
+<meta property="og:updated_time" content="2017-12-18T05:49:49.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程，就是这么简单">
 <meta name="twitter:description" content="多线程，就是这么简单">
@@ -468,7 +468,7 @@
     }
 }
 System.out.println(&quot;DONE! &quot; + getName());
-// 线程执行结束
+// 线程代码就完毕啦
 </code></pre><p> }</p>
 </li>
 </ul>
@@ -491,7 +491,7 @@ System.out.println(&quot;DONE! &quot; + getName());
     }
 }
 System.out.println(&quot;DONE! &quot; + Thread.currentThread().getName());
-// 线程执行结束
+// 线程代码就完毕啦
 </code></pre><p> }</p>
 </li>
 </ul>
@@ -504,7 +504,7 @@ System.out.println(&quot;DONE! &quot; + Thread.currentThread().getName());
 <pre><code>    return sum;
 }
 </code></pre><p>}</p>
-<p>public class TwoThreadsTest {<br>    public static void main(String args[]) {<br>        // 创建对象<br>        Callable<integer> simpleThread = new SimpleThread();<br>        // 使用FutureTask来包装对象<br>        FutureTask<integer> ft = new FutureTask<integer>(simpleThread);<br>        for (int i = 0; i &lt; 10; i++) {<br>            System.out.println(Thread.currentThread().getName() + “ “ + i);<br>            // FutureTask对象作为Thread对象的target创建新的线程<br>            Thread thread = new Thread(ft);<br>            thread.start();<br>            // 线程执行结束<br>            System.out.println(“DONE! “);<br>            try {<br>                // 取得新创建的新线程中的call()方法返回的结果<br>                System.out.println(“sum = “ + ft.get());<br>            } catch (InterruptedException e) {<br>                e.printStackTrace();<br>            } catch (ExecutionException e) {<br>                e.printStackTrace();<br>            }</integer></integer></integer></p>
+<p>public class TwoThreadsTest {<br>    public static void main(String args[]) {<br>        // 创建对象<br>        Callable<integer> simpleThread = new SimpleThread();<br>        // 使用FutureTask来包装对象<br>        FutureTask<integer> ft = new FutureTask<integer>(simpleThread);<br>        for (int i = 0; i &lt; 10; i++) {<br>            System.out.println(Thread.currentThread().getName() + “ “ + i);<br>            // FutureTask对象作为Thread对象的target创建新的线程<br>            Thread thread = new Thread(ft);<br>            thread.start();<br>            // 线程代码就完毕啦<br>            System.out.println(“DONE! “);<br>            try {<br>                // 取得新创建的新线程中的call()方法返回的结果<br>                System.out.println(“sum = “ + ft.get());<br>            } catch (InterruptedException e) {<br>                e.printStackTrace();<br>            } catch (ExecutionException e) {<br>                e.printStackTrace();<br>            }</integer></integer></integer></p>
 <pre><code>    }
 }
 </code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">整个Demo中几乎找不到我们熟悉的身影，其实，它和继承`Thread`一样，本质上都是实现了`Runnable`接口，我们来看下`FutureTask`的定义</span><br></pre></td></tr></table></figure></p>
